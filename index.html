@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/site.css?v=4">
 </head>
 <body>
 
@@ -160,19 +160,70 @@
     </div>
   </section>
 
-  <!-- And more -->
-  <section class="inner center" style="padding-top:0">
-    <h2>And the rest of the day.</h2>
-    <ul class="more" style="text-align:left">
-      <li class="pane"><i style="--c:var(--water)"></i><h3>Water and electrolytes</h3><p>One tap per glass, from the app, the widget or the Action Button.</p></li>
-      <li class="pane"><i style="--c:var(--phase)"></i><h3>Phases</h3><p>Lean down, build, endurance or general health, with targets worked out from your body and goal.</p></li>
-      <li class="pane"><i style="--c:var(--water)"></i><h3>Weekly report</h3><p>Your week as a short deck you swipe through, with a question to the coach on any card.</p></li>
-      <li class="pane"><i style="--c:var(--food)"></i><h3>Plan tomorrow</h3><p>Build tomorrow from foods you already eat, then confirm each meal with a tap.</p></li>
-      <li class="pane"><i style="--c:var(--training)"></i><h3>Energy balance</h3><p>What you ate against what you burned, corrected each week by your real weight trend.</p></li>
-      <li class="pane"><i style="--c:var(--sleep)"></i><h3>Finish your day</h3><p>An evening reminder when something is still missing, so the score counts the whole day.</p></li>
-      <li class="pane"><i style="--c:var(--water)"></i><h3>Daily backup</h3><p>A copy of everything once a day, to a folder you choose on your iPhone or in iCloud Drive.</p></li>
-      <li class="pane"><i style="--c:var(--phase)"></i><h3>Light and dark</h3><p>Follows your iPhone's appearance, in the Ronyx look.</p></li>
-    </ul>
+  <!-- And the rest of the day: panels scroll past a pinned phone; each panel
+       clips its own phone, so the screen wipes over at the panel edge. -->
+  <section class="story" aria-labelledby="story-title">
+    <div class="inner center story-head"><h2 id="story-title">And the rest of the day.</h2></div>
+
+    <article class="sp pane" style="--a:#26252e;--b:#1b1a20">
+      <div class="sp-text">
+        <span class="eyebrow" style="--c:var(--water)"><i></i>Daily score</span>
+        <h3>One number for the whole day.</h3>
+        <p>Food, water, training and sleep each count for 25 points. The score moves as you log during the day and locks at midnight.</p>
+      </div>
+      <div class="sp-fixed" aria-hidden="true">
+        <div class="phone"><img src="assets/shots/score-phone.webp" alt="" width="720" height="1483" decoding="async"></div>
+        <div class="float glass sp-chip"><div class="t">Live until midnight</div><div class="s">4th of 10 with friends today</div></div>
+      </div>
+    </article>
+
+    <article class="sp pane" style="--a:#1f2a3a;--b:#171c25">
+      <div class="sp-text">
+        <span class="eyebrow" style="--c:var(--water)"><i></i>Water</span>
+        <h3>Water with one tap.</h3>
+        <p>Log a glass or an electrolyte drink from the app, the home-screen widget or the Action Button. The target rises on training days.</p>
+      </div>
+      <div class="sp-fixed" aria-hidden="true">
+        <div class="phone"><img src="assets/shots/home-mid-phone.webp" alt="" width="720" height="1483" decoding="async"></div>
+        <div class="float glass sp-chip" style="--c:var(--water)"><div class="t"><i></i>Running 46 min</div><div class="s">+450 ml added to today's target</div></div>
+      </div>
+    </article>
+
+    <article class="sp pane" style="--a:#2e2a1e;--b:#1f1c16">
+      <div class="sp-text">
+        <span class="eyebrow" style="--c:var(--phase)"><i></i>Weekly check-in</span>
+        <h3>Targets that follow your real week.</h3>
+        <p>Every week the check-in compares what you ate with how your weight moved, works out what you really burn and proposes new targets. Approve them or keep yours.</p>
+      </div>
+      <div class="sp-fixed" aria-hidden="true">
+        <div class="phone"><img src="assets/shots/checkin-phone.webp" alt="" width="720" height="1483" decoding="async"></div>
+        <div class="float glass sp-chip" style="--c:var(--phase)"><div class="t"><i></i>Calories</div><div class="s">2,350 → 2,100 kcal a day</div></div>
+      </div>
+    </article>
+
+    <article class="sp pane" style="--a:#2a2430;--b:#1c1920">
+      <div class="sp-text">
+        <span class="eyebrow" style="--c:var(--sleep)"><i></i>Notifications</span>
+        <h3>A nudge when it matters.</h3>
+        <p>Friend requests, meals shared with you, workouts that came in from your watch, and an evening reminder when part of your day is still empty.</p>
+      </div>
+      <div class="sp-fixed" aria-hidden="true">
+        <div class="phone"><img src="assets/shots/inbox-phone.webp" alt="" width="720" height="1483" decoding="async"></div>
+        <div class="float glass sp-chip" style="--c:var(--food)"><div class="t"><i></i>Finish your day</div><div class="s">An evening reminder when a part is still empty</div></div>
+      </div>
+    </article>
+
+    <article class="sp pane dusk" style="--a:#ECE5D9;--b:#D9D5DC">
+      <div class="sp-text">
+        <span class="eyebrow" style="--c:var(--onyx)"><i></i>Light and dark</span>
+        <h3>Day and night, in the Ronyx look.</h3>
+        <p>The app follows your iPhone's appearance: dusk in the light, onyx in the dark. Same screens, same colours for food, water, training and sleep.</p>
+      </div>
+      <div class="sp-fixed" aria-hidden="true">
+        <div class="phone"><img src="assets/shots/light-low-phone.webp" alt="" width="720" height="1483" decoding="async"></div>
+        <div class="float glass sp-chip"><div class="t">Follows your iPhone</div><div class="s">Light and dark, switched by the system</div></div>
+      </div>
+    </article>
   </section>
 
   <!-- Privacy band: dusk -->
@@ -227,6 +278,6 @@
   <div class="giant" aria-hidden="true"><img src="assets/logo/ronyx-fitness-wordmark-horizontal-white.svg" alt="" width="1475" height="121"></div>
 </footer>
 
-<script src="assets/js/site.js?v=3" defer></script>
+<script src="assets/js/site.js?v=4" defer></script>
 </body>
 </html>

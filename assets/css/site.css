@@ -361,3 +361,30 @@ mark.check{background:rgba(242,201,76,.22);color:var(--ink);border-radius:5px;pa
 .split .parts b{font-size:15px}
 .js .split:not(.in) .parts i{--w:0%!important}
 @media (max-width:640px){.split .parts{gap:6px}.split .parts b{font-size:13px}.split .parts div{font-size:11px}}
+
+/* ---------- And the rest of the day: pinned phone, panels wipe past it ----------
+   Each panel is clipped (clip-path) and holds a position:fixed phone at the same
+   spot on screen. Only the part of each phone inside its own panel shows, so the
+   screen changes exactly at the panel edge. Nothing above these panels may use
+   transform or filter, or fixed would stop meaning the viewport. */
+.story{margin-top:var(--gutter)}
+.story-head{padding-bottom:clamp(28px,4vw,56px)}
+.sp{--r:40px;position:relative;min-height:max(100svh,640px);margin-top:var(--gutter);clip-path:inset(0 round 40px);display:flex;align-items:center}
+.sp-text{width:min(560px,46%);padding:clamp(40px,6vw,96px) 0 clamp(40px,6vw,96px) clamp(24px,7vw,120px)}
+.sp-text h3{margin-top:14px;font-size:clamp(32px,3.8vw,56px);line-height:1.02}
+.sp-text p{margin-top:18px;font-size:clamp(16.5px,1.35vw,19px);line-height:1.5;color:var(--ink-soft);max-width:30em}
+.sp-fixed{position:fixed;top:50%;right:max(calc(var(--gutter) + 6vw),calc((100vw - 1240px)/2 + 80px));transform:translateY(-50%);height:min(78vh,740px);aspect-ratio:720/1483;pointer-events:none}
+.sp-fixed .phone{width:100%;height:100%}
+.sp-chip{position:absolute;left:-38%;bottom:16%;max-width:250px;animation:bob 7s ease-in-out infinite}
+.sp-chip .s{margin-top:4px}
+.sp.dusk .sp-text p{color:var(--ink-soft)}
+@media (max-width:860px){
+  .sp{align-items:flex-start;min-height:max(110svh,720px)}
+  .sp-text{width:auto;padding:36px 24px 0}
+  .sp-text h3{font-size:clamp(28px,7.4vw,38px)}
+  .sp-text p{font-size:16px}
+  .sp-fixed{top:auto;bottom:4svh;right:50%;transform:translateX(50%);height:min(54svh,520px)}
+  .sp-chip{left:-30%;bottom:10%;max-width:200px;padding:10px 12px;font-size:12px;--r:16px}
+  .sp-chip .t{font-size:13px}
+}
+@media (max-width:640px){.sp{--r:30px;clip-path:inset(0 round 30px)}}
