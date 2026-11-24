@@ -369,23 +369,26 @@ mark.check{background:rgba(242,201,76,.22);color:var(--ink);border-radius:5px;pa
    transform or filter, or fixed would stop meaning the viewport. */
 .story{margin-top:var(--gutter)}
 .story-head{padding-bottom:clamp(28px,4vw,56px)}
-.sp{--r:24px;position:relative;height:clamp(540px,72vh,640px);margin-top:16px;clip-path:inset(0 round 24px);display:flex;align-items:center}
+.sp{--r:24px;position:relative;max-width:calc(var(--wide) - 2*clamp(20px,5vw,64px));margin-left:auto;margin-right:auto;height:clamp(540px,72vh,640px);margin-top:16px;clip-path:inset(0 round 24px);display:flex;align-items:center}
 .story-head+.sp{margin-top:0}
 .sp-text{width:min(600px,48%);padding:80px 0 80px clamp(32px,5.5vw,80px)}
 .sp-text h3{margin-top:14px;font-size:clamp(32px,3.8vw,56px);line-height:1.02}
 .sp-text p{margin-top:18px;font-size:clamp(16.5px,1.35vw,19px);line-height:1.5;color:var(--ink-soft);max-width:30em}
-.sp-fixed{position:fixed;top:50%;right:max(calc(var(--gutter) + 6vw),calc((100vw - 1240px)/2 + 80px));transform:translateY(-50%);height:min(78vh,740px);aspect-ratio:720/1483;pointer-events:none}
+.sp-fixed{position:fixed;top:50%;right:max(calc(var(--gutter) + 6vw),calc((100vw - var(--wide))/2 + clamp(20px,5vw,64px) + 72px));transform:translateY(-50%);height:min(78vh,740px);aspect-ratio:720/1483;pointer-events:none}
 .sp-fixed .phone{width:100%;height:100%}
 .sp-chip{position:absolute;left:-38%;bottom:16%;max-width:250px;animation:bob 7s ease-in-out infinite}
 .sp-chip .s{margin-top:4px}
 .sp.dusk .sp-text p{color:var(--ink-soft)}
 @media (max-width:860px){
-  .sp{align-items:flex-start;height:max(76svh,600px);margin-top:12px}
+  /* Phones and small tablets: no pinning (as Bevel does under 768 px). Each card
+     shows its own phone under the text, cropped by the card's bottom edge. */
+  .sp{flex-direction:column;align-items:stretch;height:auto;margin-top:12px}
   .sp-text{width:auto;padding:32px 24px 0}
   .sp-text h3{font-size:clamp(28px,7.4vw,38px)}
   .sp-text p{font-size:16px}
-  .sp-fixed{top:auto;bottom:4svh;right:50%;transform:translateX(50%);height:min(54svh,520px)}
-  .sp-chip{left:-30%;bottom:10%;max-width:200px;padding:10px 12px;font-size:12px;--r:16px}
+  .sp-fixed{position:relative;top:auto;right:auto;transform:none;height:auto;width:min(78%,340px);aspect-ratio:370/516;margin:28px auto 0;overflow:hidden}
+  .sp-fixed .phone{height:auto;filter:none}
+  .sp-chip{left:0;bottom:auto;top:58%;max-width:76%;padding:10px 12px;font-size:12px;--r:16px}
   .sp-chip .t{font-size:13px}
 }
 @media (max-width:640px){.sp{--r:22px;clip-path:inset(0 round 22px)}}
