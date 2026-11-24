@@ -49,7 +49,7 @@
       el.textContent = m[1] + '0' + m[3];
       requestAnimationFrame(step);
     };
-    const counters = '.chip b, .nums b, .board .sc, .parts b';
+    const counters = '.chip b, .nums b, .board .sc, .parts b, .split .t span:last-child';
 
     // 3. The coach chat plays once: question, typing dots, answer, chart.
     const playChat = chat => {
@@ -75,6 +75,7 @@
     };
     const loopChips = box => {
       const chips = [...box.querySelectorAll('.chips span')];
+      if (!chips.length) return;
       let i = chips.findIndex(c => c.classList.contains('on'));
       setInterval(() => {
         chips[i].classList.remove('on');

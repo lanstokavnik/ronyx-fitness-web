@@ -355,3 +355,9 @@ mark.check{background:rgba(242,201,76,.22);color:var(--ink);border-radius:5px;pa
   .coach .chat{padding:14px}
   .bubble{font-size:14px}
 }
+
+/* Score card beside the leaderboard */
+.split .parts{margin-top:12px;padding-top:12px}
+.split .parts b{font-size:15px}
+.js .split:not(.in) .parts i{--w:0%!important}
+@media (max-width:640px){.split .parts{gap:6px}.split .parts b{font-size:13px}.split .parts div{font-size:11px}}
