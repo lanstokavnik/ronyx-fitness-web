@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy policy · Ronyx Fitness</title>
+<meta name="description" content="What Ronyx Fitness does with your data: what stays on your iPhone, what goes to our server, and what goes to Anthropic, Apple and Garmin.">
+<meta name="theme-color" content="#191716">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="logo" href="../" aria-label="Ronyx Fitness home"><img src="../assets/logo/ronyx-fitness-wordmark-horizontal-white.svg" alt="Ronyx Fitness" width="207" height="17"></a>
+  <ul>
+    <li><a href="../#features">Features</a></li>
+    <li><a href="./" aria-current="page">Privacy</a></li>
+    <li><a href="../support/">Support</a></li>
+  </ul>
+  <a class="btn small" href="mailto:fitness@ronyx.si?subject=Ronyx%20Fitness%20invite">Ask for an invite</a>
+</nav>
+
+<main class="doc">
+  <h1>Privacy policy</h1>
+  <p class="meta">Last updated <mark class="check">[[date of publishing]]</mark></p>
+
+  <div class="summary pane">
+    The short version. What you log stays on your iPhone. Our server holds your account (email, name, picture), your daily score, and meals you share with friends until they answer. AI features send data to Anthropic only after you allow it. No ads, no analytics, no tracking, and nothing is sold.
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>Ronyx Fitness is published by Lan Stokavnik, <mark class="check">[[street address, postcode and town]]</mark>, Slovenia, who is the controller of your personal data under the GDPR. Contact for anything in this policy: <a href="mailto:fitness@ronyx.si">fitness@ronyx.si</a>.</p>
+
+  <h2>What stays on your iPhone</h2>
+  <p>Everything you log or the app reads is stored in the app on your iPhone: your profile (name, date of birth, sex, height), weight, meals and meal photos, water, workouts and sets, sleep, steps, targets and phases, reports, check-ins, coach conversations and what the coach remembers about you. We never receive this data, except in the cases described below.</p>
+
+  <h2>Your account and friends</h2>
+  <p>An account is optional. You need one to add friends, compare scores and share meals. You sign in with Apple or with a code we email you.</p>
+  <p>Our server (Supabase, hosted in Frankfurt, Germany) stores:</p>
+  <ul>
+    <li>Your email address, or the private relay address Apple gives us if you choose to hide yours.</li>
+    <li>Your name, profile picture and friend code.</li>
+    <li>Your daily score and its four parts (food, water, sleep, training) for each day.</li>
+    <li>Who your friends are, and pending friend requests.</li>
+    <li>Meals you share with friends, including a small photo, readable only by you and the friends you picked. They are deleted once everyone has answered, and after 7 days at the latest.</li>
+    <li>Notifications for you (friend requests, shared meals), deleted after 30 days.</li>
+    <li>If you allow notifications, your device's push token, used only to send them to you through Apple.</li>
+  </ul>
+  <p>Friends see your name, picture and daily score with its parts. They never see what you ate, what you weigh or anything else in your log, unless you share a meal with them.</p>
+  <p>Sign-in emails are sent through Resend. Mail you send to fitness@ronyx.si is forwarded to our inbox by ImprovMX.</p>
+
+  <h2>AI features (Claude by Anthropic)</h2>
+  <p>Meal estimates from photos and descriptions, label reading, plans, reports, check-in explanations and the coach use Claude, an AI model by Anthropic, PBC. Nothing is sent to Anthropic until you allow it in the app; you can turn it off in Settings → Connectors → Claude, and the rest of the app keeps working.</p>
+  <p>For each feature, the app sends what that feature needs: for example a meal photo, your logged food, water, weight, workouts, sleep and steps, your targets and your profile. Requests go one of two ways:</p>
+  <ul>
+    <li>With your own Anthropic API key, straight from your iPhone to Anthropic, under your own agreement with Anthropic.</li>
+    <li>With shared access, if we have approved you: through our server to Anthropic. Our server passes the request on and stores only how much it cost, per person per month, to apply your monthly limit. It does not store your requests or the answers.</li>
+  </ul>
+  <p>Anthropic processes this data in the United States. Under its commercial terms Anthropic does not train its models on API data. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</p>
+
+  <h2>Apple Health and connected devices</h2>
+  <p>With your permission, the app reads workouts, steps, heart rate and sleep from Apple Health. It never writes to Apple Health. Health data is not used for advertising and is shared only with Anthropic, as described above, when you allow it. Apps such as Suunto and Sleep Cycle reach Ronyx Fitness through Apple Health; Suunto FIT files you share into the app are read on your iPhone.</p>
+  <p>If you connect Garmin, the app fetches your sleep, daily summaries and HRV from Garmin directly to your iPhone with your own Garmin connection. Your Garmin and Anthropic keys are stored in your iCloud Keychain and are never sent to our server.</p>
+
+  <h2>Other services</h2>
+  <ul>
+    <li>Barcode scans: the barcode number is sent to <a href="https://openfoodfacts.org">Open Food Facts</a> to look up the product. No personal data is sent.</li>
+    <li>Push notifications are delivered by Apple's push service.</li>
+    <li>This website is hosted on GitHub Pages, which logs visitors' IP addresses for security. The site sets no cookies and runs no analytics.</li>
+  </ul>
+
+  <h2>Backups</h2>
+  <p>If you choose a backup folder, the app saves a copy of your data there once a day. "On My iPhone" keeps backups on the phone. A folder in iCloud Drive stores them, health data included, in your iCloud under Apple's terms. Backups never include your API keys.</p>
+
+  <h2>Legal basis</h2>
+  <p>We process health data (food, weight, workouts, sleep, heart rate) only with your explicit consent (GDPR Article 9(2)(a)), which you give when you connect Apple Health, allow AI features or share a meal, and can withdraw in the app at any time. Your account, friends and score are processed to provide the service you signed up for (Article 6(1)(b)).</p>
+
+  <h2>What we don't do</h2>
+  <p>No analytics, no advertising, no tracking across apps or websites, and no selling or renting of data.</p>
+
+  <h2>Your rights and deleting data</h2>
+  <p>You can see, correct and delete everything in the app. Deleting your account in Settings → Account removes your account, profile, scores, friendships, shared meals and notifications from our server. Deleting the app removes everything on your iPhone; delete any backups in your chosen folder yourself. To revoke Apple Health access, go to iPhone Settings → Health → Data Access &amp; Devices.</p>
+  <p>You have the right to access, correct, delete, restrict and port your data and to object to its processing. Write to <a href="mailto:fitness@ronyx.si">fitness@ronyx.si</a>. You can also complain to the Slovenian Information Commissioner (<a href="https://www.ip-rs.si">ip-rs.si</a>).</p>
+
+  <h2>Children</h2>
+  <p>Ronyx Fitness is not meant for anyone under 16.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version is published on this page with a new date.</p>
+</main>
+
+<footer>
+  <div class="legal" style="padding-top:36px;padding-bottom:36px;margin-top:0"><span>© 2026 Ronyx Fitness</span><span><a href="../">Home</a> · <a href="../support/">Support</a> · <a href="../terms/">Terms of use</a></span></div>
+</footer>
+
+</body>
+</html>

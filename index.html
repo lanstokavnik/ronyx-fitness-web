@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ronyx Fitness: food, training and sleep in one daily score</title>
+<meta name="description" content="An iPhone app for food, water, training and sleep. Log a meal with a photo, let your watch fill in the training, get one daily score and compare it with friends.">
+<meta name="theme-color" content="#191716">
+<meta property="og:title" content="Ronyx Fitness">
+<meta property="og:description" content="Food, training and sleep in one daily score. iPhone, in testing with friends.">
+<meta property="og:image" content="https://fitness.ronyx.si/assets/img/hero-dusk.jpg">
+<meta property="og:url" content="https://fitness.ronyx.si/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="logo" href="./" aria-label="Ronyx Fitness home"><img src="assets/logo/ronyx-fitness-wordmark-horizontal-white.svg" alt="Ronyx Fitness" width="207" height="17"></a>
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="privacy/">Privacy</a></li>
+    <li><a href="support/">Support</a></li>
+  </ul>
+  <a class="btn small" href="mailto:fitness@ronyx.si?subject=Ronyx%20Fitness%20invite&amp;body=Hi%2C%0A%0AI%27d%20like%20to%20try%20Ronyx%20Fitness.%20The%20email%20of%20my%20Apple%20Account%20(for%20TestFlight)%20is%3A%20%0A%0AWho%20sent%20me%3A%20">Ask for an invite</a>
+</nav>
+
+<main>
+
+  <!-- Hero: a dusk pane set into the onyx page -->
+  <section class="band hero dusk">
+    <div class="copy">
+      <h1>Food, training and sleep in one daily score.</h1>
+      <p class="lede">Log a meal with a photo, let your watch fill in the training, and see one number for the day that you can compare with your friends.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:fitness@ronyx.si?subject=Ronyx%20Fitness%20invite&amp;body=Hi%2C%0A%0AI%27d%20like%20to%20try%20Ronyx%20Fitness.%20The%20email%20of%20my%20Apple%20Account%20(for%20TestFlight)%20is%3A%20%0A%0AWho%20sent%20me%3A%20">Ask for an invite</a>
+        <span class="note">iPhone. In testing with a small group of friends.</span>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="chip glass a"><span>Today's score</span><b>84</b><span class="bar"><i style="--w:84%;--c:var(--water)"></i></span></div>
+      <div class="chip glass b"><span>Protein</span><b>142 / 160 g</b><span class="bar"><i style="--w:89%;--c:var(--food)"></i></span></div>
+      <div class="phone"><div class="screen"><div class="ph">Today screen</div></div></div>
+    </div>
+  </section>
+
+  <!-- Works with -->
+  <section class="works center" aria-label="Works with">
+    <p>Works with</p>
+    <ul>
+      <li>Apple Health</li>
+      <li>Suunto</li>
+      <li>Garmin</li>
+      <li>Sleep Cycle</li>
+      <li>Claude</li>
+    </ul>
+    <small>Suunto and Sleep Cycle through Apple Health. Suunto workouts also as FIT files.</small>
+  </section>
+
+  <!-- Three areas -->
+  <section id="features" class="center inner" style="padding-bottom:0">
+    <h2>Everything that moves the scale, on one screen.</h2>
+    <p class="lede">Each part has its own colour in the app, so you can read a day at a glance.</p>
+    <div class="three" style="text-align:left">
+      <article class="card pane food">
+        <h3><i></i>Food</h3>
+        <p>Take a photo, type one sentence or scan a barcode. Claude estimates calories and macros, and you can correct any item.</p>
+        <div class="phone"><div class="screen"><div class="ph">Food tab</div></div></div>
+      </article>
+      <article class="card pane training">
+        <h3><i></i>Training</h3>
+        <p>Workouts come in from your watch through Apple Health. Plan your usual week, log sets in the gym and rate each session.</p>
+        <div class="phone"><div class="screen"><div class="ph">Training tab</div></div></div>
+      </article>
+      <article class="card pane sleep">
+        <h3><i></i>Sleep</h3>
+        <p>A sleep score from stages, efficiency and how regular your nights are. With Garmin, a recovery card with HRV and Body Battery.</p>
+        <div class="phone"><div class="screen"><div class="ph">Sleep</div></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Meal logging -->
+  <section class="inner meal">
+    <div class="feature">
+      <div class="text">
+        <span class="eyebrow" style="--c:var(--food)"><i></i>Food</span>
+        <h2 style="margin-top:14px">A meal logged in one photo.</h2>
+        <p class="lede">Point the camera at your plate. The estimate comes back in seconds, item by item, and the app learns the foods you eat often.</p>
+        <ul>
+          <li>Barcode and label scanning, with the app's own memory for products Open Food Facts doesn't know.</li>
+          <li>A one-tap hidden-fat check after a photo estimate, for oil, butter and dressing the camera can't see.</li>
+          <li>Had three croissants instead of one? Change the quantity and every number scales.</li>
+          <li>Search every past meal to find the portion you had a few weeks ago.</li>
+        </ul>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="phone"><div class="screen"><div class="ph">Meal photo estimate</div></div></div>
+        <div class="float glass f1"><div class="t"><i></i>Chicken burrito bowl</div><div class="nums"><div><b>640</b><span>kcal</span></div><div><b>42 g</b><span>protein</span></div><div><b>68 g</b><span>carbs</span></div></div></div>
+        <div class="float glass f2"><div class="t">How many</div><div class="stepper"><span>−</span><b>3x</b><span>+</span></div><div class="s">Croissant, 3x: 690 kcal</div></div>
+        <div class="float glass f3" style="--c:var(--water)"><div class="t"><i></i>Hidden fat?</div><div class="s">Cooked in oil, or with a dressing? Add it with one tap.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach -->
+  <section class="band coach">
+    <div class="inner">
+      <div class="feature">
+        <div class="text">
+          <span class="eyebrow" style="--c:var(--white)"><i></i>Coach</span>
+          <h2 style="margin-top:14px">A coach that has read your week.</h2>
+          <p class="lede">Ask what to eat now, how training went or why your weight stalled. The coach sees your logged food, workouts, sleep and targets, remembers what it learns about you, and answers with your numbers and a chart when it helps.</p>
+          <ul style="--c:var(--white)">
+            <li>Send a photo of a menu and ask what fits your day.</li>
+            <li>A weekly check-in that adjusts your targets from what you actually ate and weighed.</li>
+            <li>Powered by Claude. Nothing is sent until you allow it.</li>
+          </ul>
+        </div>
+        <div class="visual" aria-hidden="true">
+          <div class="chat glass">
+            <div class="bubble me">What should I eat tonight?</div>
+            <div class="bubble ai">You're at 1,640 of 2,350 kcal and 98 of 160 g protein, and you've got a run tomorrow morning. Go for about 700 kcal with 55 g protein: the salmon and rice you had on Sunday fits almost exactly.
+              <div class="mini"><i style="--h:70%"></i><i style="--h:88%"></i><i style="--h:64%"></i><i style="--h:95%"></i><i style="--h:80%"></i><i style="--h:76%"></i><i class="today" style="--h:62%"></i></div>
+            </div>
+            <div class="ask glass"><span>Ask about your day</span><span>↑</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Friends -->
+  <section class="inner friends">
+    <div class="feature flip">
+      <div class="text">
+        <span class="eyebrow" style="--c:var(--water)"><i></i>Friends</span>
+        <h2 style="margin-top:14px">Compete on the day.</h2>
+        <p class="lede">Every day gets a score out of 100 from four parts: food, water, sleep and training. Add friends with a link or a QR code and see who had the better day.</p>
+        <ul>
+          <li>Friends see your name, picture and daily score. Never what you ate or what you weigh.</li>
+          <li>Ate together? Share the meal and split it like a bill: in full, evenly or by percent. It lands in their log.</li>
+          <li>Notifications for friend requests, shared meals and workouts that came in.</li>
+        </ul>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="board pane" style="--a:var(--p2a);--b:var(--p2b)">
+          <h4><span>Today</span><span>Friends</span></h4>
+          <ol>
+            <li><span class="n">1</span><span class="av" style="--bg:#3D5A80">MZ</span><span>Miha</span><span class="sc">91</span></li>
+            <li class="me"><span class="n">2</span><span class="av" style="--bg:#7A4F2A">You</span><span>You</span><span class="sc">84</span></li>
+            <li><span class="n">3</span><span class="av" style="--bg:#4A6B4F">NH</span><span>Nika</span><span class="sc">77</span></li>
+            <li><span class="n">4</span><span class="av" style="--bg:#5B4A7A">LK</span><span>Luka</span><span class="sc">62</span></li>
+          </ol>
+          <div class="parts">
+            <div><b>88</b>Food<i style="--c:var(--food);--w:88%"></i></div>
+            <div><b>100</b>Water<i style="--c:var(--water);--w:100%"></i></div>
+            <div><b>72</b>Sleep<i style="--c:var(--sleep);--w:72%"></i></div>
+            <div><b>76</b>Training<i style="--c:var(--training);--w:76%"></i></div>
+          </div>
+        </div>
+        <div class="split pane" style="--a:var(--p3a);--b:var(--p3b)">
+          <div class="t" style="font-weight:600">Margherita pizza with Ana</div>
+          <div class="chips"><span>Full</span><span class="on">Even</span><span>Custom</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- And more -->
+  <section class="inner center" style="padding-top:0">
+    <h2>And the rest of the day.</h2>
+    <ul class="more" style="text-align:left">
+      <li class="pane"><i style="--c:var(--water)"></i><h3>Water and electrolytes</h3><p>One tap per glass, from the app, the widget or the Action Button.</p></li>
+      <li class="pane"><i style="--c:var(--phase)"></i><h3>Phases</h3><p>Lean down, build, endurance or general health, with targets worked out from your body and goal.</p></li>
+      <li class="pane"><i style="--c:var(--water)"></i><h3>Weekly report</h3><p>Your week as a short deck you swipe through, with a question to the coach on any card.</p></li>
+      <li class="pane"><i style="--c:var(--food)"></i><h3>Plan tomorrow</h3><p>Build tomorrow from foods you already eat, then confirm each meal with a tap.</p></li>
+      <li class="pane"><i style="--c:var(--training)"></i><h3>Energy balance</h3><p>What you ate against what you burned, corrected each week by your real weight trend.</p></li>
+      <li class="pane"><i style="--c:var(--sleep)"></i><h3>Finish your day</h3><p>An evening reminder when something is still missing, so the score counts the whole day.</p></li>
+      <li class="pane"><i style="--c:var(--water)"></i><h3>Daily backup</h3><p>A copy of everything once a day, to a folder you choose on your iPhone or in iCloud Drive.</p></li>
+      <li class="pane"><i style="--c:var(--phase)"></i><h3>Light and dark</h3><p>Follows your iPhone's appearance, in the Ronyx look.</p></li>
+    </ul>
+  </section>
+
+  <!-- Privacy band: dusk -->
+  <section class="band privacy-band dusk">
+    <div class="inner">
+      <span class="eyebrow" style="--c:var(--onyx)"><i></i>Privacy</span>
+      <h2 style="margin-top:14px">Your log stays on your iPhone.</h2>
+      <p class="lede">Meals, photos, weight, workouts and sleep are stored on your phone. Backups go to a folder you pick.</p>
+      <ul class="facts">
+        <li class="glass"><b>The server holds little</b>Your account keeps your email, name, picture and daily score. A meal you share waits there until your friends answer, 7 days at most.</li>
+        <li class="glass"><b>You choose what Claude sees</b>AI features ask first and send only what the feature you used needs.</li>
+        <li class="glass"><b>No ads, no tracking</b>No analytics, no advertising and no selling of data. Delete your account in the app at any time.</li>
+      </ul>
+      <a class="more-link" href="privacy/">Read the privacy policy</a>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="inner cta">
+    <h2>In testing with friends.<br>Want in?</h2>
+    <p class="lede">Send us the email of your Apple Account and we'll add you to the TestFlight group.</p>
+    <a class="btn big" href="mailto:fitness@ronyx.si?subject=Ronyx%20Fitness%20invite&amp;body=Hi%2C%0A%0AI%27d%20like%20to%20try%20Ronyx%20Fitness.%20The%20email%20of%20my%20Apple%20Account%20(for%20TestFlight)%20is%3A%20%0A%0AWho%20sent%20me%3A%20">Ask for an invite</a>
+    <p class="note">Free. iPhone with iOS 17 or later.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="cols">
+    <div>
+      <img class="mark" src="assets/img/app-icon.png" alt="" width="44" height="44">
+      <p class="medical">Ronyx Fitness is for general fitness and nutrition tracking. Its targets, estimates and the coach's answers aren't medical advice. Talk to a doctor or dietitian about health conditions, pregnancy, eating disorders or big changes to your diet.</p>
+    </div>
+    <div>
+      <h4>App</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="mailto:fitness@ronyx.si?subject=Ronyx%20Fitness%20invite">Ask for an invite</a></li>
+        <li><a href="support/">Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy/">Privacy policy</a></li>
+        <li><a href="terms/">Terms of use</a></li>
+        <li><a href="mailto:fitness@ronyx.si">fitness@ronyx.si</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal"><span>© 2026 Ronyx Fitness</span><span>Apple Health is a trademark of Apple Inc. Claude is a trademark of Anthropic, PBC.</span></div>
+  <img class="giant" src="assets/logo/ronyx-fitness-wordmark-horizontal-white.svg" alt="" aria-hidden="true" width="1475" height="121">
+</footer>
+
+</body>
+</html>
