@@ -209,13 +209,14 @@ h2{font-size:clamp(34px,4.4vw,64px);line-height:1.02}
 /* ---------- Footer ---------- */
 footer{position:relative;overflow:hidden;margin:var(--gutter);border-radius:40px;background:radial-gradient(120% 90% at 50% 125%,#5a4632 0%,#2a231d 45%,#1b1917 75%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
 footer .cols{max-width:var(--wide);margin:0 auto;padding:clamp(48px,6vw,80px) clamp(20px,5vw,64px) 0;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
-footer .mark{width:44px;height:44px;border-radius:12px}
+footer .mark{width:48px;height:48px;border-radius:13px;box-shadow:0 0 0 1px rgba(255,255,255,.18),10px 14px 24px -12px rgba(0,0,0,.7)}
 footer .medical{margin-top:18px;font-size:13.5px;line-height:1.55;color:var(--ink-soft);max-width:30em}
 footer h4{font-size:14px;font-weight:600;margin-bottom:12px}
 footer ul{list-style:none;display:grid;gap:8px;font-size:15px;color:var(--ink-soft)}
 footer ul a:hover{color:var(--ink)}
 footer .legal{max-width:var(--wide);margin:40px auto 0;padding:0 clamp(20px,5vw,64px);font-size:12.5px;color:var(--ink-faint);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer .giant{display:block;width:92%;height:auto;margin:36px auto 0;opacity:.9;filter:blur(6px);-webkit-mask-image:linear-gradient(180deg,#000 35%,transparent 100%);mask-image:linear-gradient(180deg,#000 35%,transparent 100%);transform:translateY(18%);user-select:none;pointer-events:none}
+footer .giant{position:relative;margin:28px auto 0;padding:40px 4% 0;user-select:none;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%);height:clamp(90px,10vw,170px);overflow:visible}
+footer .giant img{width:100%;height:auto;opacity:.9;filter:blur(var(--blur,5px));transition:filter 1.2s ease}
 
 /* ---------- Text pages (privacy, support, terms) ---------- */
 .doc{max-width:780px;margin:0 auto;padding:150px clamp(20px,5vw,40px) 80px}
@@ -277,3 +278,50 @@ mark.check{background:rgba(242,201,76,.22);color:var(--ink);border-radius:5px;pa
   .doc{padding-top:120px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+/* ---------- Motion (only with assets/js/site.js, off with reduced motion) ---------- */
+@property --w{syntax:"<percentage>";inherits:true;initial-value:0%}
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease var(--d,0ms),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .card.rv .phone{transform:translateY(80px);transition:transform 1.2s cubic-bezier(.2,.7,.2,1) calc(var(--d,0ms) + 150ms)}
+.js .card.rv.in .phone{transform:none}
+
+/* Hero: phone rises in, chips float */
+.js .hero .stage .phone{opacity:0;transform:translateY(120px);transition:opacity .9s ease .15s,transform 1.3s cubic-bezier(.2,.7,.2,1) .15s}
+.js .hero.ready .stage .phone{opacity:1;transform:none}
+.js .hero .chip{opacity:0;transition:opacity .8s ease .9s}
+.js .hero .chip.in{opacity:1}
+.js .hero .chip.in{animation:bob 6s ease-in-out 1.6s infinite}
+.js .hero .chip.b.in{animation-duration:7s;animation-delay:2.2s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.js .float{animation:bob 7s ease-in-out infinite}
+.js .float.f2{animation-delay:-2.3s;animation-duration:8s}
+.js .float.f3{animation-delay:-4.6s}
+
+/* Bars fill when their block comes in */
+.js .chip .bar i,.js .parts i{transition:--w 1.3s cubic-bezier(.2,.7,.2,1) .4s}
+.js .chip .bar i{width:0}
+.js .chip.in .bar i{width:var(--w);transition:width 1.3s cubic-bezier(.2,.7,.2,1) .5s}
+.js .board:not(.in) .parts i{--w:0%!important}
+
+/* Coach chat plays in */
+.js .chat .bubble,.js .chat .ask{opacity:0;transform:translateY(14px) scale(.98);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.js .chat .bubble.on,.js .chat .ask.on{opacity:1;transform:none}
+.js .bubble.ai.typing{font-size:0;line-height:0;padding:16px 18px;width:74px}
+.js .bubble.ai.typing .mini{display:none}
+.js .bubble.ai.typing::before{content:"";display:block;width:38px;height:8px;background:radial-gradient(circle 4px,var(--ink-soft) 98%,transparent) 0 0/13px 8px repeat-x;animation:dots 1s steps(3) infinite}
+@keyframes dots{0%{opacity:.4}50%{opacity:1}}
+.js .bubble.ai .mini i{height:0;transition:height .9s cubic-bezier(.2,.7,.2,1)}
+.js .bubble.ai.done .mini i{height:var(--h)}
+.js .bubble.ai.done .mini i:nth-child(2){transition-delay:.06s}.js .bubble.ai.done .mini i:nth-child(3){transition-delay:.12s}
+.js .bubble.ai.done .mini i:nth-child(4){transition-delay:.18s}.js .bubble.ai.done .mini i:nth-child(5){transition-delay:.24s}
+.js .bubble.ai.done .mini i:nth-child(6){transition-delay:.3s}.js .bubble.ai.done .mini i:nth-child(7){transition-delay:.36s}
+
+/* Leaderboard rows slide in */
+.js .board li{opacity:0;transform:translateX(-18px);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.js .board.in li{opacity:1;transform:none}
+.js .board.in li:nth-child(2){transition-delay:.1s}.js .board.in li:nth-child(3){transition-delay:.2s}.js .board.in li:nth-child(4){transition-delay:.3s}
+.split .chips span{transition:background .3s ease,color .3s ease,border-color .3s ease}
+
+/* Footer wordmark sharpens a little as it comes in */
+.js footer .giant{--blur:14px}
