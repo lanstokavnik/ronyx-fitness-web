@@ -93,8 +93,8 @@ h2{font-size:clamp(34px,4.4vw,64px);line-height:1.02}
 .hero .stage .phone{position:absolute;bottom:-90px;width:min(380px,30vw)}
 .hero .chip{position:absolute;z-index:3;--r:22px;padding:14px 16px;font-size:13.5px;line-height:1.35;min-width:170px}
 .hero .chip b{display:block;font-size:22px;font-weight:600;font-stretch:110%;letter-spacing:-.02em}
-.hero .chip.a{left:-2%;top:30%}
-.hero .chip.b{right:-3%;top:56%}
+.hero .chip.a{left:-6%;top:16%}
+.hero .chip.b{right:-5%;top:60%}
 .chip .bar{display:block;height:5px;border-radius:9px;background:var(--rule);margin-top:9px;overflow:hidden}
 .chip .bar i{display:block;height:100%;width:var(--w);background:var(--c);border-radius:9px}
 
@@ -181,6 +181,7 @@ h2{font-size:clamp(34px,4.4vw,64px);line-height:1.02}
 .split .chips span{padding:7px 14px;border-radius:999px;border:1px solid var(--rule);font-size:13.5px;font-weight:600}
 .split .chips span.on{background:var(--white);color:var(--onyx);border-color:var(--white)}
 .friends .visual{flex-direction:column;align-items:center}
+.friends .visual .split{position:absolute;left:0;bottom:12%;width:min(300px,70%);z-index:2;animation:bob 7s ease-in-out infinite}
 
 /* And more */
 .more{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gutter);margin-top:clamp(36px,4vw,56px);list-style:none}
@@ -325,3 +326,4 @@ mark.check{background:rgba(242,201,76,.22);color:var(--ink);border-radius:5px;pa
 
 /* Footer wordmark sharpens a little as it comes in */
 .js footer .giant{--blur:14px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
